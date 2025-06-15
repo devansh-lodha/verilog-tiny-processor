@@ -18,6 +18,8 @@ For a comprehensive walkthrough of the design process, architecture, and a detai
 
 The processor follows a modular design, with distinct Verilog modules for each functional unit.
 
+![Our Processor Architecture](processor_arch.png)
+
 * **Top-Level Module (`processor.v`)**: Integrates all sub-modules and includes the Program Counter (PC) logic.
 * **Instruction Memory (`instruction_memory.v`)**: A 32-byte read-only memory that stores the program to be executed. Unused memory is filled with `HLT` instructions to prevent runaway execution.
 * **Register File (`register_file.v`)**: Contains 16 general-purpose 8-bit registers. It responds to read/write signals from the Control Unit.
